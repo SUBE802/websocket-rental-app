@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Chat app</title>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <h1 class="title">iChat 💬</h1>
+  <!--user form (provide the  form for users to input their email and username)-->
+  <div id="user-form">
+    <span>Email  <input id="email" type="text" placeholder="your email"></span>
+    <span> Username <input id="username" type="text" placeholder="your name"> </span>
+    <p><button id="set-username">Set user details</button></p>
+  </div>
+  <h4 id="my-username"></h4>
+  <!--connected user section-->
+  <div id="users-container" style="display: none;">
+    <ul id="connected-users">Users Connected: </ul>
+  </div>
+
+  <!-- main chat section -->
+  <div id="message-div" class="main" style="display: none;">
+    <div class="input-wrapper" style="padding:10px" ;>
+      <p id="recipent-username">random</p>
+    </div>
+
+    <ul class="message-container" id="message-container">
+
+    </ul>
+
+    <form class="message-form" id="message-form">
+      <input type="text" name="message" id="message-input" class="message-input" />
+      <div class="v-divider"></div>
+      <button type="submit" class="send-button">
+        send <span><i class="fas fa-paper-plane"></i></span>
+      </button>
+    </form>
+  </div>
+  <h3 class="clients-total" id="client-total"></h3>
+
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"
+    integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg=="
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
+
